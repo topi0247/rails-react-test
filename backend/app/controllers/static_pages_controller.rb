@@ -1,5 +1,6 @@
 class StaticPagesController < ApplicationController
   def index
-    render json: { message: "hallo world" }
+    tasks = Task.all
+    render json: tasks,status: :ok
   end
 end
